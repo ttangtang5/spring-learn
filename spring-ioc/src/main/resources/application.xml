@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans inject="byType">
+    <bean id="userService" class="com.tang.service.impl.UserServiceImpl">
+    </bean>
+
+    <bean id="orderService" class="com.tang.service.impl.OrderServiceImpl">
+    </bean>
+
+    <bean id="userController" class="com.tang.controller.UserController">
+        <!--<property name="userService" ref="userService"></property>
+        <property name="orderService" ref="orderService"></property>-->
+        <construction args="userService" ref="userService"></construction>
+        <construction args="orderService" ref="orderService"></construction>
+    </bean>
+</beans>

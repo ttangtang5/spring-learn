@@ -29,8 +29,13 @@ public class LogAspect {
         System.out.println("log after");
     }
 
+    /**
+     * JoinPoint joinPoint 添加该参数就报错
+     * @param proceedingJoinPoint
+     * @throws Throwable
+     */
     @Around("pointCut()")
-    public void around(JoinPoint joinPoint, ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+    public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("log around before");
         proceedingJoinPoint.proceed();
         System.out.println("log around after");
