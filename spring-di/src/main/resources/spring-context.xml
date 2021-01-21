@@ -7,14 +7,30 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
         ">
+    <bean id="car" class="com.tang.dl.pojo.Car">
+        <property name="id" value="1"/>
+        <property name="name" value="大货车"/>
+    </bean>
 
-    <!--<bean id="userService" class="com.tang.di.service.impl.UserServiceImpl"/>
+    <bean id="truckCar" class="com.tang.dl.pojo.TruckCar" parent="car" primary="true">
+        <property name="loadWeight" value="100000"/>
+    </bean>
 
-    <bean id="userController" class="com.tang.di.api.UserController">
-        &lt;!&ndash;<property name="userService" ref="userService"/>&ndash;&gt;
-        &lt;!&ndash;<constructor-arg name="userService" ref="userService"></constructor-arg>&ndash;&gt;
-    </bean>-->
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="car" />
+    </bean>
 
-    <context:component-scan base-package="com.tang.di"></context:component-scan>
+
+    <bean id="userService" class="com.tang.di.service.impl.UserServiceImpl"/>
+
+    <bean id="userControllerByConstruction" class="com.tang.di.api.UserControllerByConstruction" >
+        <constructor-arg name="userService3" ref="userService"></constructor-arg>
+    </bean>
+
+    <bean id="userControllerBySetter" class="com.tang.di.api.UserControllerBySetter" >
+        <property name="userService3" ref="userService"/>
+    </bean>
+
+    <!--<context:component-scan base-package="com.tang.di"></context:component-scan>-->
     <!--<context:annotation-config></context:annotation-config>-->
 </beans>
