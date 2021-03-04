@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+        ">
+
+    <!--构造器实例化-->
+    <bean id="construction-car" class="com.tang.pojo.Car">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="car"/>
+    </bean>
+
+    <!--静态工厂实例化-->
+    <bean id="static-method-car" class="com.tang.pojo.Car" factory-method="createUser"/>
+
+    <!--实例工厂实例化-->
+    <bean id="userFactory" class="com.tang.factory.DefaultUserBeanFactory"/>
+    <bean id="factory-car" class="com.tang.pojo.Car" factory-bean="userFactory" factory-method="createBean"/>
+
+    <!--factoryBean 实例化对象-->
+    <bean id="userFactoryBean" class="com.tang.factory.UserFactoryBean"/>
+
+    <!--ServiceLoaderFactoryBean方式  ServiceLoaderFactoryBean（加载 ServiceLoader）、ServiceFactoryBean（加载单个对象）、ServiceListFactoryBean（加载全部对象）-->
+    <bean id="serviceLoaderFactoryBean" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
+        <property name="serviceType" value="com.tang.factory.UserBeanFactory"/>
+    </bean>
+</beans>
