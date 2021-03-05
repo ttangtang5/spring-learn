@@ -1,6 +1,12 @@
 package com.tang.pojo;
 
-public class Car {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class Car implements InitializingBean, DisposableBean {
 
     private Long id;
 
@@ -43,5 +49,33 @@ public class Car {
         car.setId(1L);
         car.setName("static-method-car");
         return car;
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("car PostConstruct init...");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("car initializingBean init...");
+    }
+
+    public void initMethod() {
+        System.out.println("car initMethod init...");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("car preDestroy destroy...");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("car disposableBean destroy...");
+    }
+
+    public void destroyMethod() {
+        System.out.println("car destroyMethod init...");
     }
 }
