@@ -18,14 +18,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DIApplicationTest {
 
     public static void main(String[] args) {
-        //ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-context.xml");
-
-        UserControllerByConstruction userControllerByConstruction = (UserControllerByConstruction) applicationContext.getBean("userControllerByConstruction");
-        userControllerByConstruction.test();
-
-        UserControllerBySetter userControllerBySetter = (UserControllerBySetter) applicationContext.getBean("userControllerBySetter");
-        userControllerBySetter.test();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
+        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-context.xml");
+//
+        //UserControllerByConstruction userControllerByConstruction = (UserControllerByConstruction) applicationContext.getBean("userControllerByConstruction");
+        //userControllerByConstruction.test();
+//
+        //UserControllerBySetter userControllerBySetter = (UserControllerBySetter) applicationContext.getBean("userControllerBySetter");
+        //userControllerBySetter.test();
     }
 
 }

@@ -22,7 +22,7 @@ public class UserControllerBySetter {
     }
 
    /*
-    public abstract class UserController
+    public abstract class UserControllerBySetter
     @Lookup
     protected abstract UserService getUserService();*/
 
