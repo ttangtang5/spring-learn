@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 此处name 并非属性name 对应setter方法name-->
+    <bean id="myCar" class="com.tang.pojo.Car" >
+        <property name="myId" value="1"/>
+        <property name="myName" value="mycar"/>
+    </bean>
+
+    <!-- 通过setter方法的name 找对应的bean -->
+    <!--<bean class="com.tang.pojo.CarHolder" autowire="byName">
+    </bean>-->
+
+    <!-- 通过setter方法的参数类型 找对应的bean -->
+    <!--<bean class="com.tang.pojo.CarHolder" autowire="byType">
+    </bean>-->
+
+    <!-- 通过constructor方法的参数类型 找对应的bean -->
+    <bean class="com.tang.pojo.CarHolder" autowire="constructor">
+    </bean>
+</beans>

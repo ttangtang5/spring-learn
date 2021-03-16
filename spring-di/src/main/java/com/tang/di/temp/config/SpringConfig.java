@@ -1,4 +1,4 @@
-package com.tang.di.config;
+package com.tang.di.temp.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

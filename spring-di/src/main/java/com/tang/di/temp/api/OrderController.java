@@ -1,6 +1,6 @@
-package com.tang.di.api;
+package com.tang.di.temp.api;
 
-import com.tang.di.service.OrderService;
+import com.tang.di.temp.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

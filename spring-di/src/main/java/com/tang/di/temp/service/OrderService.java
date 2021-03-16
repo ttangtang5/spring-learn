@@ -1,4 +1,4 @@
-package com.tang.di.service;
+package com.tang.di.temp.service;
 
 public interface OrderService {
 }

@@ -1,4 +1,4 @@
-package com.tang.dl.pojo;
+package com.tang.pojo;
 
 import com.tang.dl.annotation.SpecialCar;
 

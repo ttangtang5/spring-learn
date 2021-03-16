@@ -1,14 +1,9 @@
-package com.tang.di.api;
+package com.tang.di.temp.api;
 
-import com.tang.di.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Lookup;
-import org.springframework.stereotype.Controller;
-
-import javax.annotation.Resource;
+import com.tang.di.temp.service.UserService;
 
 /**
- * @Description 构造器注入：根据参数名称查找注入
+ * @Description 构造器注入：根据构造器参数名称查找注入
  *
  * @Author tang
  * @Date 2020/6/25 10:14

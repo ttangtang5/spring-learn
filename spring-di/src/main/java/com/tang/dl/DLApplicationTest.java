@@ -1,7 +1,7 @@
 package com.tang.dl;
 
 import com.tang.dl.annotation.SpecialCar;
-import com.tang.dl.pojo.Car;
+import com.tang.pojo.Car;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;

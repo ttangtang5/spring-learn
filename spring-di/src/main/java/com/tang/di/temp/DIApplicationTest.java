@@ -1,11 +1,8 @@
-package com.tang.di;
+package com.tang.di.temp;
 
-import com.tang.di.api.UserControllerByConstruction;
-import com.tang.di.api.UserControllerBySetter;
-import com.tang.di.config.SpringConfig;
+import com.tang.di.temp.config.SpringConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 /**

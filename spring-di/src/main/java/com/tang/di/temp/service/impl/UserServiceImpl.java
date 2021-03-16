@@ -1,8 +1,6 @@
-package com.tang.di.service.impl;
+package com.tang.di.temp.service.impl;
 
-import com.tang.di.service.UserService;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import com.tang.di.temp.service.UserService;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 

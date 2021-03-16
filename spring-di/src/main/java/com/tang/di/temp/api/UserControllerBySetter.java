@@ -1,10 +1,9 @@
-package com.tang.di.api;
+package com.tang.di.temp.api;
 
-import com.tang.di.service.UserService;
-import org.springframework.stereotype.Controller;
+import com.tang.di.temp.service.UserService;
 
 /**
- * @Description setter注入：根据setter方法名称注入
+ * @Description setter注入：根据xml配置属性名称找setter方法名称注入
  *
  * @Author tang
  * @Date 2020/6/25 10:14

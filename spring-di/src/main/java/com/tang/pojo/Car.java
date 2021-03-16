@@ -1,4 +1,4 @@
-package com.tang.dl.pojo;
+package com.tang.pojo;
 
 public class Car {
 
@@ -6,19 +6,19 @@ public class Car {
 
     private String name;
 
-    public Long getId() {
-        return id;
+    public Car() {
     }
 
-    public void setId(Long id) {
+    public Car(Long myId, String myName) {
+        this.id = myId;
+        this.name = myName;
+    }
+
+    public void setMyId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public void setMyName(String name) {
         this.name = name;
     }
 

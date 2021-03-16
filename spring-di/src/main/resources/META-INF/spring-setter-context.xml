@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 此处name 并非属性name 对应setter方法name-->
+    <bean class="com.tang.pojo.Car" >
+        <property name="myId" value="1"/>
+        <property name="myName" value="mycar"/>
+    </bean>
+</beans>
