@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
  * 其次最后判断candidate中得beanName是否和依赖“属性名”存在一致，有则返回注入
  * 否则 抛出无法匹配异常
  *
- * "@Autowired -> 先byType -> @Qualifier -> @Primary -> 优先级 -> 在byName
+ * "@Autowired -> 先判断是否依赖描述为集合 -> 先byType -> @Qualifier -> @Primary -> 优先级 -> 在byName
  */
 @Controller
 public class OrderController {
